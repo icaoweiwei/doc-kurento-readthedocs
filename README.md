@@ -10,46 +10,39 @@ Copyright © 2013-2016 [Kurento]. Licensed under [Apache 2.0 License].
 doc-kurento
 ===========
 
-Kurento Documentation. Made with [Sphinx] and [Read-the-docs] theme.
+Kurento 文档。使用 [Sphinx] 和 [Read-the-docs] 主题制作。
 
-What is Kurento
+Kurento 是什么
 ---------------
 
-Kurento is an open source software project providing a platform suitable
-for creating modular applications with advanced real-time communication
-capabilities. For knowing more about Kurento, please visit the Kurento
-project website: http://www.kurento.org.
+Kurento 是一个开源软件项目，提供适合创建具有高级实时通信功能的模块化应用的平台。有关 Kurento 的更多信息，请访问Kurento项目网站：http://www.kurento.org.
 
-Kurento is part of [FIWARE]. For further information on the relationship of
-FIWARE and Kurento check the [Kurento FIWARE Catalog Entry]
+Kurento 是 [FIWARE] 的一部分。 有关 FIWARE 和 Kurento 的关系的更多信息，请查看 [Kurento FIWARE Catalog Entry] 。
 
-Kurento is part of the [NUBOMEDIA] research initiative.
+Kurento 是 [NUBOMEDIA] 研究计划的一部分。
 
-Documentation
+文档
 -------------
 
-The Kurento project provides detailed [documentation] including tutorials,
-installation and development guides. A simplified version of the documentation
-can be found on [readthedocs.org]. The [Open API specification] a.k.a. Kurento
-Protocol is also available on [apiary.io].
+Kurento 项目提供详细的[文档][documentation]，包括教程、安装和开发指南。 在 [readthedocs.org] 可以找到简化版本的文档。 [apiary.io] 上也提供了 [开源API规范][Open API specification] 和 Kurento协议。
 
-Source
+代码
 ------
 
-Code for other Kurento projects can be found in the [GitHub Kurento Group].
+其他 Kurento 项目的代码可以在 [GitHub Kurento Group] 中找到。
 
-News and Website
+新闻和网站
 ----------------
 
-Check the [Kurento blog]
-Follow us on Twitter @[kurentoms].
+浏览 [Kurento blog]\
+在Twitter上关注我们 @[kurentoms]
 
-Issue tracker
+问题跟踪
 -------------
 
-Issues and bug reports should be posted to the [GitHub Kurento bugtracker]
+问题和错误报告应该发布到 [GitHub Kurento bugtracker]
 
-Licensing and distribution
+许可和分发
 --------------------------
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -64,37 +57,23 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-Contribution policy
+贡献政策
 -------------------
 
-You can contribute to the Kurento community through bug-reports, bug-fixes, new
-code or new documentation. For contributing to the Kurento community, drop a
-post to the [Kurento Public Mailing List] providing full information about your
-contribution and its value. In your contributions, you must comply with the
-following guidelines
+您可以通过错误报告、错误修复、新代码或新文档向Kurento社区做出贡献。为了对Kurento社区做出贡献，请在 [Kurento公开邮件列表][Kurento Public Mailing List] 中发一个帖子，提供有关您的贡献和价值的完整信息。在您的贡献中，您必须遵守以下准则
 
-* You must specify the specific contents of your contribution either through a
-  detailed bug description, through a pull-request or through a patch.
-* You must specify the licensing restrictions of the code you contribute.
-* For newly created code to be incorporated in the Kurento code-base, you must
-  accept Kurento to own the code copyright, so that its open source nature is
-  guaranteed.
-* You must justify appropriately the need and value of your contribution. The
-  Kurento project has no obligations in relation to accepting contributions
-  from third parties.
-* The Kurento project leaders have the right of asking for further
-  explanations, tests or validations of any code contributed to the community
-  before it being incorporated into the Kurento code-base. You must be ready to
-  addressing all these kind of concerns before having your code approved.
+* 您必须通过详细的错误描述，通过 pull-request 或通过补丁指定贡献的具体内容。
+* 您必须指定您提供的代码的许可限制。
+* 对于新创建的代码，您必须接受 Kurento 拥有代码版权，以保证其开放源代码性质。
+* 你必须适当地证明你的贡献的需要和价值。Kurento 项目没有义务接受第三方的捐款。
+* 在向社区纳入 Kurento 代码库之前，Kurento 项目负责人有权要求您进一步解释、测试或验证您向社区贡献的代码。在您的代码被批准之前，您必须准备好处理所有这些问题。
 
-Support
+支持
 -------
 
-The Kurento project provides community support through the  [Kurento Public
-Mailing List] and through [StackOverflow] using the tags *kurento* and
-*fiware-kurento*.
+Kurento 项目通过 [Kurento公共邮件列表][Kurento Public Mailing List] 和 [StackOverflow]（使用 *kurento* 和 *fiware-kurento* 标签）提供社区支持。
 
-Before asking for support, please read first the [Kurento Netiquette Guidelines]
+在要求支持之前，请先阅读 [Kurento Netiquette 指南][Kurento Netiquette Guidelines]。
 
 [documentation]: http://www.kurento.org/documentation
 [FIWARE]: http://www.fiware.org

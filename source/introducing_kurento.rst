@@ -1,124 +1,78 @@
 .. _Introducing_Kurento:
 
 %%%%%%%%%%%%%%%%%%%
-Introducing Kurento
+Kurento 简介
 %%%%%%%%%%%%%%%%%%%
 
-WebRTC media servers
+WebRTC 媒体服务器
 ====================
 
-:term:`WebRTC` is an open source technology that enables web browsers with
-Real-Time Communications (RTC) capabilities via JavaScript APIs. It has been
-conceived as a peer-to-peer technology where browsers can directly communicate
-without the mediation of any kind of infrastructure. This model is enough for
-creating basic applications but features such as group communications, media
-stream recording, media broadcasting or media transcoding are difficult to
-implement on top of it. For this reason, many applications require using a
-media server.
+:term:`WebRTC` 是一种开放源码技术，可以通过 JavaScript APIs 使web浏览器具有实时通信(Real-Time Communications, RTC)功能。它被认为是一种点对点技术，在这种技术中，浏览器可以直接通信，而不需要任何基础设施中介。这个模型足以创建基本的应用程序，但在它上面很难实现像组通信、媒体流录制、媒体广播或媒体转换等功能。出于这个原因，许多应用程序需要使用媒体服务器。
 
 .. figure:: ./images/media-server-intro.png
    :align:   center
    :alt:     Peer-to-peer WebRTC approach vs. WebRTC through a media server
 
-   *Peer-to-peer WebRTC approach vs. WebRTC through a media server*
+   *点对点WebRTC方法 vs. WebRTC通过媒体服务器*
 
-Conceptually, a WebRTC media server is just a kind of “multimedia middleware”
-(it is in the middle of the communicating peers) where media traffic pass
-through when moving from source to destinations. Media servers are capable of
-processing media streams and offering different types including groups
-communications (distributing the media stream one peer generates among several
-receivers, i.e. acting as Multi-Conference Unit, MCU), mixing (transforming
-several incoming stream into one single composite stream), transcoding
-(adapting codecs and formats between incompatible clients), recording (storing
-in a persistent way the media exchanged among peers), etc.
+从概念上讲，WebRTC媒体服务器只是一种“多媒体中间件”（它位于通信节点的中间），媒体流量通过它从源移动到目的地。媒体服务器能够处理媒体流和提供不同类型包括组通信(分发媒体流从一个生产者到多个接收器，例如充当Multi-Conference Unit, MCU)、混合(将几个输入流转换为一个复合流)、转码(在不兼容的客户端之间适配编解码器和格式)、记录(节点间交换的媒体进行持久化存储)等等。
 
 .. figure:: ./images/media-server-capabilities.png
    :align:  center
    :alt:    Typical WebRTC Media Server capabilities
 
-   *Typical WebRTC Media Server capabilities*
+   *典型的WebRTC媒体服务器功能*
 
-Kurento Media Server
+Kurento 媒体服务器
 ====================
 
-At the heart of the Kurento architecture there is a media server called the
-**Kurento Media Server (KMS)**. Kurento Media Server is based on pluggable
-media processing capabilities meaning that any of its provided features is a
-pluggable module that can be activated or deactivated. Moreover, developers can
-seamlessly create additional modules extending Kurento Media Server with new
-functionalities which can be plugged dynamically.
+在Kurento架构的核心是一个名为 **Kurento Media Server (KMS)** 的媒体服务器。Kurento媒体服务器基于可插入的媒体处理功能，这意味着它所提供的任何功能都是可以被激活或停用的可插入模块。此外，开发人员可以无缝地创建额外的模块，可以动态扩展Kurento媒体服务器的新功能。
 
-Kurento Media Server provides, out of the box, group communications, mixing,
-transcoding, recording and playing. In addition, it also provides advanced
-modules for media processing including computer vision, augmented reality,
-alpha blending and much more.
+Kurento媒体服务器提供开箱即用的组通信、混合、转码、录音和播放功能。此外，它还为媒体处理提供了高级模块，包括计算机视觉、增强现实、alpha混合等。
 
 .. figure:: ./images/kurento-media-server-intro.png
    :align:  center
    :alt:    Kurento Media Server capabilities
 
-   *Kurento Media Server capabilities*
+   *Kurento媒体服务器功能*
 
-Kurento API, Clients, and Protocol
+Kurento API、客户端和协议
 ==================================
 
-Kurento Media Server capabilities are exposed by the **Kurento API** to
-application developers. This API is implemented by means of libraries called
-**Kurento Clients**. Kurento offers two clients out of the box for **Java** and
-**JavaScript**. If you have another favorite language, you can still use
-Kurento using directly the **Kurento Protocol**. This protocol allows to
-control Kurento Media Server and it is based on Internet standards such as
-:term:`WebSocket` and :term:`JSON-RPC`. The picture below shows how to use
-Kurento Clients in three scenarios:
+Kurento媒体服务器的功能由 **Kurento API** 公开给应用程序开发者。这个API是通过称为 **Kurento Clients** 的库实现的。Kurento为 **Java** 和 **JavaScript** 提供了两个客户端。如果你喜欢其他语言，你仍然可以直接使用 **Kurento协议**。该协议允许控制Kurento媒体服务器，它基于互联网标准，如 :term:`WebSocket` 和 :term:`JSON-RPC`。下图显示了如何在三种情况下使用Kurento客户端：
 
-* Using the Kurento JavaScript Client directly in a compliant
-  `WebRTC <http://www.webrtc.org/>`_ browser
+* 直接在兼容 `WebRTC <http://www.webrtc.org/>`_ 的浏览器中使用Kurento JavaScript客户端
 
-* Using the Kurento Java Client in a Java EE Application Server
+* 在Java EE应用服务器中使用Kurento Java客户端
 
-* Using the Kurento JavaScript Client in a Node.js server
+* 在Node.js服务器中使用Kurento JavaScript客户端
 
 .. figure:: ./images/kurento-clients-connection.png
    :align:  center
    :alt:    Connection of Kurento Clients (Java and JavaScript) to Kuento Media Server
 
-   *Connection of Kurento Clients (Java and JavaScript) to Kuento Media Server*
+   *将Kurento客户端（Java和JavaScript）连接到Kuento媒体服务器*
 
-Complete examples for these three technologies is described in the
-:doc:`tutorials <./tutorials>` section.
+这三种技术的完整示例在 :doc:`教程 <./tutorials>` 部分中有描述。
 
-Kurento Client's API is based on the concept of **Media Element**. A Media
-Element holds a specific media capability. For example, the media element
-called *WebRtcEndpoint* holds the capability of sending and receiving WebRTC
-media streams, the media element called *RecorderEndpoint* has the capability
-of recording into the file system any media streams it receives, the
-*FaceOverlayFilter* detects faces on the exchanged video streams and adds a
-specific overlaid image on top of them, etc. Kurento exposes a rich toolbox of
-media elements as part of its APIs.
+Kurento客户端的API基于 **Media Element** 的概念。媒体元素拥有特定的媒体功能。例如，称为 *WebRtcEndpoint* 的媒体元素具有发送和接收WebRTC媒体流的能力，称为 *RecorderEndpoint* 的媒体元素具有将其接收的任何媒体流录入文件系统的能力，*FaceOverlayFilter* 会检测交换的视频流上的人脸，并添加一个特定的覆盖图像在其上，等等。Kurento公开了一个丰富的媒体元素工具箱作为其API的一部分。
 
 .. figure:: ./images/kurento-basic-toolbox.png
    :align:  center
    :alt:    Some Media Elements provided out of the box by Kurento
 
-   *Some Media Elements provided out of the box by Kurento*
+   *Kurento提供的一些媒体元素*
 
-To better understand theses concepts it is recommended to take a look to
-:doc:`Kurento API <./mastering/kurento_API>` and
-:doc:`Kurento Protocol <./mastering/kurento_protocol>` sections. You can also
-take a loot to the JavaDoc and JsDoc:
+为了更好地理解这些概念，建议您查看 :doc:`Kurento API <./mastering/kurento_API>` 和 :doc:`Kurento Protocol <./mastering/kurento_protocol>` 部分。您还可以查看JavaDoc和JsDoc：
 
-- `kurento-client-java <./_static/langdoc/javadoc/index.html>`_ : JavaDoc of Kurento
-  Java Client.
+- `kurento-client-java <./_static/langdoc/javadoc/index.html>`_ : Kurento Java客户端的JavaDoc。
 
-- `kurento-client-js <./_static/langdoc/jsdoc/kurento-client-js/index.html>`_ : JsDoc
-  of Kurento JavaScript Client.
+- `kurento-client-js <./_static/langdoc/jsdoc/kurento-client-js/index.html>`_ : Kurento JavaScript客户端的JsDoc。
 
-- `kurento-utils-js <./_static/langdoc/jsdoc/kurento-utils-js/index.html>`_ : JsDoc of
-  an utility JavaScript library aimed to simplify the development of WebRTC
-  applications.
+- `kurento-utils-js <./_static/langdoc/jsdoc/kurento-utils-js/index.html>`_ : 一个旨在简化WebRTC应用程序开发的实用程序JavaScript库的JsDoc。
 
 
-Creating applications with Kurento
+使用Kurento创建应用程序
 ==================================
 
 From the application developer perspective, Media Elements are like *Lego*

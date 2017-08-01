@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%
-Mastering Kurento
+精通 Kurento
 %%%%%%%%%%%%%%%%%
 
 Kurento Architecture

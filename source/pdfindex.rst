@@ -1,7 +1,7 @@
 :orphan:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Welcome to Kurento's documentation!
+欢迎来到 Kurento 文档!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 .. toctree::

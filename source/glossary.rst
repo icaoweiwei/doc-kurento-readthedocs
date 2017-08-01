@@ -1,5 +1,5 @@
 %%%%%%%%
-Glossary
+术语表
 %%%%%%%%
 
 This is a glossary of terms that often appear in discussion about multimedia

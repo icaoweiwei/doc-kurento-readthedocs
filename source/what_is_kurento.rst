@@ -1,56 +1,32 @@
 .. _What_is_Kurento:
 
 .. image:: images/kurento-rect-logo3.png
-   :alt:    Creating client applications through Kurento APIs
+   :alt:    通过Kurento API创建客户端应用程序
    :align:  center
 
 %%%%%%%%%%%%%%%
-What's Kurento?
+Kurento 是什么?
 %%%%%%%%%%%%%%%
 
-**Kurento** is a WebRTC media server and a set of client APIs making simple the
-development of advanced video applications for WWW and smartphone platforms.
-Kurento features include group communications, transcoding, recording, mixing,
-broadcasting and routing of audiovisual flows.
+**Kurento** 是一个 WebRTC 媒体服务器和一组客户端API，为 WWW 和智能手机平台开发高级视频应用程序。
+Kurento 的特点包括群组通信、转码、录音、混合、广播和音频流的路由。
 
-Kurento also provides advanced media processing capabilities involving computer
-vision, video indexing, augmented reality and speech analysis. Kurento modular
-architecture makes simple the integration of third party media processing
-algorithms (i.e. speech recognition, sentiment analysis, face recognition,
-etc.), which can be transparently used by application developers as the rest of
-Kurento built-in features.
+Kurento 还提供先进的媒体处理能力，包括计算机视觉、视频索引、增强现实和语音分析。
+Kurento 模块化架构简化了第三方媒体处理算法（例如：语音识别、情感分析、人脸识别等）的集成，应用程序开发人员可以透明地使用它作为 Kurento 内置功能的其余部分。
 
-Kurento's core element is **Kurento Media Server**, responsible for media
-transmission, processing, loading and recording. It is implemented in low level
-technologies based on :term:`GStreamer` to optimize the resource consumption.
-It provides the following features:
+Kurento 的核心元素是 **Kurento Media Server** （Kurento媒体服务器）, 负责媒体的传播、处理、加载和记录。在基于 :term:`GStreamer` 的底层技术中实现资源消耗优化。
+它提供了以下功能:
 
--  Networked streaming protocols, including :term:`HTTP`, :term:`RTP` and
-   :term:`WebRTC`.
--  Group communications (MCUs and SFUs functionality) supporting both media
-   mixing and media routing/dispatching.
--  Generic support for computational vision and augmented reality filters.
--  Media storage supporting writing operations for :term:`WebM` and
-   :term:`MP4` and playing in all formats supported by *GStreamer*.
--  Automatic media transcodification between any of the codecs supported by
-   GStreamer including VP8, H.264, H.263, AMR, OPUS, Speex, G.711, etc.
+-  网络流协议，包括 :term:`HTTP`, :term:`RTP` 和 :term:`WebRTC`。
+-  群组通信(MCUs和SFUs功能)支持媒体混合和媒体路由/分发。
+-  对计算视觉和增强现实过滤器的一般支持。
+-  媒体存储支持 :term:`WebM` 和 :term:`MP4` 的写入操作，并使用 *GStreamer* 支持的所有格式进行播放。
+-  在 GStreamer 支持的任何编解码器之间自动媒体转换，包括 VP8、H.264、H.263、AMR、OPUS、Speex、G.711 等格式。
 
-There are available :term:`Kurento Client` libraries in
-`Java <http://www.java.com/>`__ and
-`Javascript <http://www.w3.org/standards/webdesign/script>`__ to control
-Kurento Media Server from applications. If you prefer another programming
-language, you can use the :term:`Kurento Protocol`, based on :term:`WebSocket`
-and :term:`JSON-RPC`.
+在 `Java <http://www.java.com/>`__ 和 `Javascript <http://www.w3.org/standards/webdesign/script>`__ 中有可用的 :term:`Kurento Client` 库，可以从应用程序中控制 Kurento媒体服务器。如果您喜欢其他的编程语言，则可以使用基于 :term:`WebSocket` 和 :term:`JSON-RPC` 的 :term:`Kurento Protocol`。
 
-Kurento is open source, released under the terms of
-`Apache 2.0 <http://www.apache.org/licenses/LICENSE-2.0>`__ license. Its
-source code is hosted on `GitHub <https://github.com/Kurento>`__.
+Kurento是开源的，根据 `Apache 2.0 <http://www.apache.org/licenses/LICENSE-2.0>`__ 许可协议发布。它的源代码托管在 `GitHub <https://github.com/Kurento>`__ 上。
 
-If you want to put your hands on quickly, the best way is
-:doc:`installing the Kurento Media Server<installation_guide>` and take a look
-to our :doc:`tutorials<tutorials>` in form of working demo applications. You
-can choose your favorite technology to build multimedia applications: **Java**,
-**Browser JavaScript** or **Node.js**.
+如果您想快速上手，最好的方法是 :doc:`安装Kurento媒体服务器<installation_guide>`，并以运行演示应用程序的形式查看我们的 :doc:`教程<tutorials>`。您可以选择您喜欢的技术来构建多媒体应用程序:  **Java**、**浏览器 JavaScript** 或 **Node.js**。
 
-If you want to make the most of Kurento, please take a look to the
-:doc:`advanced documentation<mastering_kurento>`.
+如果您想充分使用 Kurento，请参考 :doc:`高级文档<mastering_kurento>`。

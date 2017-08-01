@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%
-Kurento Tutorials
+Kurento 教程
 %%%%%%%%%%%%%%%%%
 
 This section contains tutorials showing how to use Kurento framework to build

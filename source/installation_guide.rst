@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Kurento Media Server Installation
+Kurento 媒体服务器安装
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Kurento Media Server (KMS) has to be installed on **Ubuntu 14.04 LTS** (64 bits).

@@ -75,42 +75,22 @@ Kurento客户端的API基于 **Media Element** 的概念。媒体元素拥有特
 使用Kurento创建应用程序
 ==================================
 
-From the application developer perspective, Media Elements are like *Lego*
-pieces: you just need to take the elements needed for an application and
-connect them following the desired topology. In Kurento jargon, a graph of
-connected media elements is called a **Media Pipeline**. Hence, when creating a
-pipeline, developers need to determine the capabilities they want to use (the
-media elements) and the topology determining which media elements provide media
-to which other media elements (the connectivity). The connectivity is
-controlled through the *connect* primitive, exposed on all Kurento Client APIs.
-This primitive is always invoked in the element acting as source and takes as
-argument the sink element following this scheme:
+从应用程序开发人员的角度来看，Media Elements 就像 *Lego* 一样：您只需要使用应用程序所需的元素，并按照所需的拓扑结构连接它们。在 Kurento 术语中，连接的媒体元素的图形称为 **媒体管道(Media Pipeline)**。 因此，在创建管道时，开发人员需要确定他们想要使用的功能（媒体元素）和拓扑结构，来确定哪些媒体元素向另外一些媒体元素提供媒体（连接性）。连接性是通过 *connect* 原语进行控制，暴露在所有 Kurento 客户端API 上。 这个原语总是在作为源的元素中调用，汇点元素作为下面模式的参数：
 
 .. sourcecode:: java
 
    sourceMediaElement.connect(sinkMediaElement)
 
-For example, if you want to create an application recording WebRTC streams into
-the file system, you'll need two media elements: *WebRtcEndpoint* and
-*RecorderEndpoint*. When a client connects to the application, you will need to
-instantiate these media elements making the stream received by the
-*WebRtcEndpoint* (which is capable of receiving WebRTC streams) to be feed to
-the *RecorderEndpoint* (which is capable of recording media streams into the
-file system). Finally you will need to connect them so that the stream received
-by the former is fed into the later:
+例如：如果要创建将 WebRTC流 录入文件系统的应用程序，则需要两个媒体元素： *WebRtcEndpoint* 和 *RecorderEndpoint*。 当客户端连接到应用程序时，您将需要实例化这些媒体元素，使得 *WebRtcEndpoint* （能够接收WebRTC流）接收到的流被馈送到 *RecorderEndpoint* （能够将媒体流记录到文件系统中）。 最后，您需要连接它们，以便前者接收到的流进入后者：
 
 .. sourcecode:: java
 
    WebRtcEndpoint.connect(RecorderEndpoint)
 
-To simplify the handling of WebRTC streams in the client-side, Kurento provides
-an utility called *WebRtcPeer*. Nevertheless, the standard WebRTC API
-(*getUserMedia*, *RTCPeerConnection*, and so on) can also be used to connect to
-*WebRtcEndpoints*. For further information please visit the
-:doc:`tutorials <./tutorials>` section.
+为了简化WebRTC流在客户端的处理，Kurento 提供了一个名为 *WebRtcPeer* 的实用程序。 然而，标准的WebRTC API（*getUserMedia* 、 *RTCPeerConnection* 等）也可以用于连接到 *WebRtcEndpoints*。有关更多信息，请访问 :doc:`教程 <./tutorials>` 部分。
 
 .. figure:: ./images/media-pipeline-sample.png
    :align:  center
    :alt:    Simple Example of a Media Pipeline
 
-   *Simple Example of a Media Pipeline*
+   *媒体管道的简单示例*
